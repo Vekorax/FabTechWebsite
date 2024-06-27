@@ -1,0 +1,287 @@
+html {
+  overflow-y: scroll;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.introButton {
+  margin: 5%;
+  border-radius: 50px;
+  font-size: xx-large;
+  background-color: aquamarine;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color:white;
+  text-decoration: none;
+}
+
+#buttonIntro {
+  margin-left: auto; 
+  margin-right: auto;
+  width: 100%;
+  position:absolute;
+  bottom:15px;
+}
+
+.btn-green {
+  background-color: #03DB7C !important;
+  border: #03DB7C !important;
+}
+
+#navbar {
+  background-color: rgba(0, 0, 0, 0.534) !important;
+  margin: 0 !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+#navbar a {
+  color: white !important;
+}
+
+#intro{
+  color: white;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  background-image: url("./_misc/images/new bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 800px;
+}
+
+#intro p {
+  max-width: 300px;
+}
+
+#intro h1 {
+  text-shadow: -1px 1px 6px rgba(0,0,0,0.6);
+  font-size: 50px;
+  font-weight: 700 !important;
+}
+
+.padding-btn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.intro-block {
+  margin-top: 100px;
+}
+
+.intro-block h1 {
+  font-size: 40px;
+}
+
+#intro-block-first {
+  margin: auto;
+  max-width: 950px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.intro-block p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color:#6B6B6B;
+}
+
+#pc-use-representation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#pc-use-representation img{
+  width: 25%;
+}
+
+.bg-dif {
+  margin-top: 100px;
+  background-color: #F7F7F7;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.block img {
+  margin-bottom: auto;
+  width: 30%;
+  height: max-content;
+}
+
+.block div {
+  text-align: left;
+  margin-top: 50px;
+  max-width: 700px;
+}
+
+.block h1 {
+  font-size: 40px;
+}
+
+.block p {
+  color:#6B6B6B;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.block Button {
+  margin-bottom: 60px;
+}
+
+.reviews {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review {
+  width: 350px;
+  height: 300px;
+  display:flex;
+  flex-direction: row;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.616);
+  color: white;
+  text-decoration: none;
+}
+
+.review > img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  flex: 1;
+  width: 150px;
+}
+
+.reviewText {
+  flex:2;
+  position:relative;
+}
+
+.reviewLink{
+  text-decoration: none;
+}
+
+.reviewFirstInfo p {
+  position:absolute;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: justify;
+}
+
+.reviewLastInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:30px;
+  position:absolute;
+  bottom:0;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 100%;
+}
+
+.reviewLastInfo > p {
+  margin:0;
+}
+
+.reviewLastInfo2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media all and (max-width: 1200px) and (min-width: 768px)
+{
+    .block {
+      flex-direction: column;
+      align-items: center;
+    }
+    .block img {
+      width: 60%;
+    }
+    .block div {
+      margin-top: -40px;
+      text-align: center;
+    }
+    #block-pc {
+      flex-direction: column-reverse;
+    }
+
+
+}
+
+@media all and (max-width: 767px)
+{
+  .block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .block img {
+    width: 100%;
+  }
+  #pc-use-representation img{
+    width: 25%;
+  }
+  .review > img {
+    display: none;
+  }
+  .block div {
+    margin-top: -40px;
+    text-align: center;
+  }
+  #block-pc {
+    flex-direction: column-reverse;
+  }
+}
