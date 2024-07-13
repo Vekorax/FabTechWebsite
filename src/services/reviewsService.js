@@ -10,9 +10,16 @@ async function getReviewsById(id) {
     return res.data[0];
   }
 
-  const reviewsServices = {
-    getAllReviews,
-    getReviewsById,
-  };
+async function getNumberOfReviews() {
+  const res = await axios.get('reviews');
+  return Object.keys(res.data).length;
+}
+
+const reviewsServices = {
+  getAllReviews,
+  getReviewsById,
+  getNumberOfReviews,
+};
+
 
 export default reviewsServices;

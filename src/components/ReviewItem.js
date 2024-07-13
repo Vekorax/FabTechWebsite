@@ -1,31 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
-function ReviewItem({review}){
+function ReviewItem(props) {
     let stars = "";
 
-    for (let i = 0; i < review.stars; i++) {
+    for (let i = 0; i < props.review.stars; i++) {
         stars += "⭐";
     } 
-    console.log(review.image);
     return (
-        <Link className="reviewLink" to={`/review/${review.id}`}>
-            <div className="review">
-                <img src={review.image} alt="reviewImage"/>
-                <div className="reviewText">
-                    <div className="reviewFirstInfo">
-                        <h1>{review.name}</h1>
-                        <p>{review.review}</p>
-                    </div>
-                    <div className="reviewLastInfo">
-                        <p>{review.price}$</p>
-                        <div className="reviewLastInfo2">
-                            <p>{review.username} - </p>
-                            <p>{stars}</p>
+                <Link to={`/review/${props.review.id}`} className={props.className}>
+                        <img src={props.review.image} alt="reviewImage"/>
+                        <div>
+                                <h2>{props.review.name}</h2>
+                                <p>{props.review.review}</p>
+                                <h3>{props.review.price} $</h3>
+                                <p>{props.review.username}</p>
+                                <p>{stars}</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </Link>
+                </Link>
     );
 }
 

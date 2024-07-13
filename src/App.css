@@ -70,7 +70,15 @@ html {
   color: white !important;
 }
 
-#intro{
+.dropdown-menu {
+  background-color: black !important;
+}
+
+.drop:hover {
+  background-color: gray !important;
+}
+
+.intro{
   color: white;
   text-align: left !important;
   display: flex;
@@ -82,14 +90,18 @@ html {
   min-height: 800px;
 }
 
-#intro p {
+.intro p {
   max-width: 300px;
 }
 
-#intro h1 {
+.intro h1 {
   text-shadow: -1px 1px 6px rgba(0,0,0,0.6);
   font-size: 50px;
   font-weight: 700 !important;
+}
+
+.intro-other {
+  min-height: 500px;
 }
 
 .padding-btn {
@@ -131,8 +143,11 @@ html {
   width: 25%;
 }
 
-.bg-dif {
+#afterIntro {
   margin-top: 100px;
+}
+
+.bg-dif {
   background-color: #F7F7F7;
 }
 
@@ -143,6 +158,7 @@ html {
 }
 
 .block img {
+  margin-top: auto;
   margin-bottom: auto;
   width: 30%;
   height: max-content;
@@ -169,69 +185,75 @@ html {
   margin-bottom: 60px;
 }
 
-.reviews {
-  width: 100%;
+#btnAndReview {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn-review {
+  margin-top:auto;
+  margin-bottom: auto;
+  height: 50px;
+}
+
+#block-review {
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+#block-review > div> Button {
+  margin-top:30px;
+}
+
+.reviewHome {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
   align-items: center;
-}
-
-.review {
-  width: 350px;
-  height: 300px;
-  display:flex;
-  flex-direction: row;
-  border-radius: 15px;
-  margin: 20px;
-  background-color: rgba(0, 0, 0, 0.616);
-  color: white;
+  justify-content: center;
   text-decoration: none;
 }
 
-.review > img {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  flex: 1;
-  width: 150px;
+.reviewHome p {
+  color:#6B6B6B;
 }
 
-.reviewText {
-  flex:2;
-  position:relative;
+.reviewHome div h2, div h3 {
+  color: black;
 }
 
-.reviewLink{
-  text-decoration: none;
+.reviewHome img {
+  max-width: 25%;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
-.reviewFirstInfo p {
-  position:absolute;
-  margin-left: 5px;
-  margin-right: 5px;
-  text-align: justify;
+.reviewHome div {
+  height: 350px;
+  max-width: 500px;
+  text-align: left;
 }
 
-.reviewLastInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height:30px;
-  position:absolute;
-  bottom:0;
-  margin-left: auto; 
-  margin-right: auto;
-  width: 100%;
+#blockPres {
+  margin-top: 75px;
 }
 
-.reviewLastInfo > p {
-  margin:0;
+#blockPres img {
+  border-radius: 20px;
 }
 
-.reviewLastInfo2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+#presentationText {
+  font-size: 20px;
 }
+
+#footer {
+  padding-top:20px;
+  border-top: 1px solid #E6E6E6;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -252,14 +274,20 @@ html {
       width: 60%;
     }
     .block div {
-      margin-top: -40px;
       text-align: center;
     }
-    #block-pc {
+    .block-pc {
       flex-direction: column-reverse;
     }
 
 
+}
+
+@media all and (max-width: 991px)
+{
+  .reviewHome img {
+    content-visibility: hidden;
+  }
 }
 
 @media all and (max-width: 767px)
@@ -274,14 +302,10 @@ html {
   #pc-use-representation img{
     width: 25%;
   }
-  .review > img {
-    display: none;
-  }
   .block div {
-    margin-top: -40px;
     text-align: center;
   }
-  #block-pc {
+  .block-pc {
     flex-direction: column-reverse;
   }
 }

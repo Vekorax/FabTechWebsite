@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import reviewsServices from '../services/reviewsService';
+import reviewsServices from '../../services/reviewsService';
 import {useEffect, useState} from 'react';
 
 function SpecificReview() {

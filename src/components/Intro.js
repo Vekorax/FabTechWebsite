@@ -1,13 +1,14 @@
 import { Button, Container } from "react-bootstrap";
+import { withNamespaces } from 'react-i18next';
 
 
-function Intro() {
+function Intro({t}) {
     return (
-        <div id="intro">
+        <div className="intro">
             <Container>
                 <div>
-                    <h1>Fab Tech</h1>
-                    <p>Assemblement / optimisation d’ordinateur et conception de site web</p>
+                    <h1>Fab's PC</h1>
+                    <p>{t('desc-header-home')}</p>
                     <Button className="btn-green padding-btn">Fiveer</Button>
                 </div>
             </Container>
@@ -15,4 +16,4 @@ function Intro() {
     );
 }
 
-export default Intro;
+export default withNamespaces()(Intro);
